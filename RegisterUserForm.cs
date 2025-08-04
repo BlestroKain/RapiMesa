@@ -78,7 +78,9 @@ namespace Rapimesa
                 Username = username,
                 Password = password,
                 Rol = rol,
-                NombreCompleto = nombre
+                NombreCompleto = nombre,
+                FailedAttempts = 0,
+                IsLocked = false
             });
 
             SaveUsers();

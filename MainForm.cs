@@ -53,41 +53,45 @@ namespace Rapimesa
         {
             if (!File.Exists(path))
             {
-                var package = new ExcelPackage();
-                var ws = package.Workbook.Worksheets.Add("Inventario");
-                ws.Cells[1, 1].Value = "ID";
-                ws.Cells[1, 2].Value = "Producto";
-                ws.Cells[1, 3].Value = "Stock";
-                ws.Cells[1, 4].Value = "PrecioUnidad";
-                package.Workbook.Worksheets.Add("Historia");
-                package.SaveAs(new FileInfo(path));
+                using (var package = new ExcelPackage())
+                {
+                    var ws = package.Workbook.Worksheets.Add("Inventario");
+                    ws.Cells[1, 1].Value = "ID";
+                    ws.Cells[1, 2].Value = "Producto";
+                    ws.Cells[1, 3].Value = "Stock";
+                    ws.Cells[1, 4].Value = "PrecioUnidad";
+                    package.Workbook.Worksheets.Add("Historia");
+                    package.SaveAs(new FileInfo(path));
+                }
             }
         }
 
         private void LoadInventory()
         {
-            var package = new ExcelPackage(new FileInfo(path));
-            var ws = package.Workbook.Worksheets["Inventario"];
-            _dtInventario = new DataTable();
-
-            for (int col = 1; ws.Cells[1, col].Value != null; col++)
+            using (var package = new ExcelPackage(new FileInfo(path)))
             {
-                _dtInventario.Columns.Add(ws.Cells[1, col].Text);
-            }
+                var ws = package.Workbook.Worksheets["Inventario"];
+                _dtInventario = new DataTable();
 
-            int row = 2;
-            while (ws.Cells[row, 1].Value != null)
-            {
-                var dataRow = _dtInventario.NewRow();
-                for (int col = 1; col <= _dtInventario.Columns.Count; col++)
+                for (int col = 1; ws.Cells[1, col].Value != null; col++)
                 {
-                    dataRow[col - 1] = ws.Cells[row, col].Text;
+                    _dtInventario.Columns.Add(ws.Cells[1, col].Text);
                 }
-                _dtInventario.Rows.Add(dataRow);
-                row++;
-            }
 
-            dataGridView1.DataSource = _dtInventario;
+                int row = 2;
+                while (ws.Cells[row, 1].Value != null)
+                {
+                    var dataRow = _dtInventario.NewRow();
+                    for (int col = 1; col <= _dtInventario.Columns.Count; col++)
+                    {
+                        dataRow[col - 1] = ws.Cells[row, col].Text;
+                    }
+                    _dtInventario.Rows.Add(dataRow);
+                    row++;
+                }
+
+                dataGridView1.DataSource = _dtInventario;
+            }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -125,38 +129,41 @@ namespace Rapimesa
             var fila = dataGridView1.SelectedRows[0];
             int id = int.Parse(fila.Cells["ID"].Value.ToString());
 
-            var package = new ExcelPackage(new FileInfo(path));
-            var ws = package.Workbook.Worksheets["Inventario"];
-
-            int filaExcel = 2;
-            while (ws.Cells[filaExcel, 1].Value != null)
+            using (var package = new ExcelPackage(new FileInfo(path)))
             {
-                if (int.Parse(ws.Cells[filaExcel, 1].Text) == id)
+                var ws = package.Workbook.Worksheets["Inventario"];
+
+                int filaExcel = 2;
+                while (ws.Cells[filaExcel, 1].Value != null)
                 {
-                    int stockActual = int.Parse(ws.Cells[filaExcel, 3].Text);
-                    int nuevoStock = stockActual + cantidad;
-
-                    if (nuevoStock < 0)
+                    if (int.Parse(ws.Cells[filaExcel, 1].Text) == id)
                     {
-                        MessageBox.Show("No hay suficiente stock.");
-                        return;
+                        int stockActual = int.Parse(ws.Cells[filaExcel, 3].Text);
+                        int nuevoStock = stockActual + cantidad;
+
+                        if (nuevoStock < 0)
+                        {
+                            MessageBox.Show("No hay suficiente stock.");
+                            return;
+                        }
+
+                        ws.Cells[filaExcel, 3].Value = nuevoStock;
+
+                        string producto = ws.Cells[filaExcel, 2].Text;
+                        double precio = double.Parse(ws.Cells[filaExcel, 4].Text);
+
+                        RegistrarHistorial(package, producto, cantidad, precio, ingreso ? "Ingreso" : "Egreso");
+
+                        package.Save();
+
+                        break;
                     }
-
-                    ws.Cells[filaExcel, 3].Value = nuevoStock;
-
-                    string producto = ws.Cells[filaExcel, 2].Text;
-                    double precio = double.Parse(ws.Cells[filaExcel, 4].Text);
-
-                    RegistrarHistorial(package, producto, cantidad, precio, ingreso ? "Ingreso" : "Egreso");
-
-                    package.Save();
-                    LoadInventory();
-
-                    MessageBox.Show($"{(ingreso ? "Ingreso" : "Egreso")} registrado.");
-                    return;
+                    filaExcel++;
                 }
-                filaExcel++;
             }
+
+            LoadInventory();
+            MessageBox.Show($"{(ingreso ? "Ingreso" : "Egreso")} registrado.");
         }
 
         private void RegistrarHistorial(ExcelPackage package, string producto, int cantidad, double precio, string tipo)
