@@ -58,16 +58,40 @@ namespace Rapimesa
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            var user = _users.Find(u => u.Username == usernameTextBox.Text && u.Password == passwordTextBox.Text);
-            if (user != null)
+            var user = _users.Find(u => u.Username == usernameTextBox.Text);
+            if (user == null)
             {
+                MessageBox.Show("Usuario o contraseña incorrectos.");
+                return;
+            }
+
+            if (user.IsLocked)
+            {
+                MessageBox.Show("Cuenta bloqueada. Contacta a un supervisor.");
+                return;
+            }
+
+            if (user.Password == passwordTextBox.Text)
+            {
+                user.FailedAttempts = 0;
+                SaveUsers();
                 var main = new MainForm(user);
                 main.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos.");
+                user.FailedAttempts++;
+                if (user.FailedAttempts >= 3)
+                {
+                    user.IsLocked = true;
+                    MessageBox.Show("Cuenta bloqueada por múltiples intentos fallidos.");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.");
+                }
+                SaveUsers();
             }
         }
     }
@@ -78,5 +102,7 @@ namespace Rapimesa
         public string Password { get; set; }
         public string Rol { get; set; }
         public string NombreCompleto { get; set; }
+        public int FailedAttempts { get; set; }
+        public bool IsLocked { get; set; }
     }
 }

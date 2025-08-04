@@ -27,25 +27,28 @@ namespace Rapimesa
                 return;
             }
 
-            var package = new ExcelPackage(new FileInfo(path));
-            var ws = package.Workbook.Worksheets["Inventario"];
-
-            int nuevaFila = ws.Dimension?.End.Row + 1 ?? 2;
-            int nuevoId = 1;
-
-            // Buscar último ID si existe
-            if (nuevaFila > 2)
+            using (var package = new ExcelPackage(new FileInfo(path)))
             {
-                var ultimaId = int.Parse(ws.Cells[nuevaFila - 1, 1].Text);
-                nuevoId = ultimaId + 1;
+                var ws = package.Workbook.Worksheets["Inventario"];
+
+                int nuevaFila = ws.Dimension?.End.Row + 1 ?? 2;
+                int nuevoId = 1;
+
+                // Buscar último ID si existe
+                if (nuevaFila > 2)
+                {
+                    var ultimaId = int.Parse(ws.Cells[nuevaFila - 1, 1].Text);
+                    nuevoId = ultimaId + 1;
+                }
+
+                ws.Cells[nuevaFila, 1].Value = nuevoId;
+                ws.Cells[nuevaFila, 2].Value = nombre;
+                ws.Cells[nuevaFila, 3].Value = cantidad;
+                ws.Cells[nuevaFila, 4].Value = precio;
+
+                package.Save();
             }
 
-            ws.Cells[nuevaFila, 1].Value = nuevoId;
-            ws.Cells[nuevaFila, 2].Value = nombre;
-            ws.Cells[nuevaFila, 3].Value = cantidad;
-            ws.Cells[nuevaFila, 4].Value = precio;
-
-            package.Save();
             MessageBox.Show("Producto registrado correctamente.");
             this.Close();
         }
