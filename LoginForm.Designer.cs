@@ -1,4 +1,6 @@
-﻿namespace Rapimesa
+﻿using System;
+
+namespace Rapimesa
 {
     partial class LoginForm
     {
@@ -6,7 +8,7 @@
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button loginButton;
-
+        private System.Windows.Forms.Button btnRecuperar;
         private System.Windows.Forms.Label userLabel;
         private System.Windows.Forms.Label passwordLabel;
 
@@ -70,6 +72,20 @@
             this.passwordLabel.Size = new System.Drawing.Size(61, 13);
             this.passwordLabel.TabIndex = 2;
             this.passwordLabel.Text = "Contraseña";
+
+            this.btnRecuperar = new System.Windows.Forms.Button();
+            this.Controls.Add(this.btnRecuperar);
+
+            // 
+            // btnRecuperar
+            // 
+            this.btnRecuperar.Location = new System.Drawing.Point(120, 140); // Ajusta según tu layout
+            this.btnRecuperar.Name = "btnRecuperar";
+            this.btnRecuperar.Size = new System.Drawing.Size(150, 23);
+            this.btnRecuperar.Text = "¿Olvidaste tu contraseña?";
+            this.btnRecuperar.UseVisualStyleBackColor = true;
+            this.btnRecuperar.Click += new System.EventHandler(this.btnRecuperar_Click);
+
             // 
             // LoginForm
             // 
@@ -88,5 +104,6 @@
             this.PerformLayout();
 
         }
+
     }
 }

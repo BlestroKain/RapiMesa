@@ -45,6 +45,11 @@
             // numCantidad
             // 
             this.numCantidad.Location = new System.Drawing.Point(100, 42);
+            this.numCantidad.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numCantidad.Minimum = new decimal(new int[] {
             1,
             0,

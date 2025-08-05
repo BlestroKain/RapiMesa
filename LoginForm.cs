@@ -10,6 +10,8 @@ namespace Rapimesa
     {
         private List<User> _users;
         private string userFile = "usuarios.json";
+        private int intentosFallidos = 0;
+        private const int maxIntentos = 3;
 
         public LoginForm()
         {
@@ -24,6 +26,11 @@ namespace Rapimesa
                 registro.ShowDialog();
                 LoadUsers(); // Cargar de nuevo después de registrar
             }
+        }
+        private void btnRecuperar_Click(object sender, EventArgs e)
+        {
+            var recoverForm = new RecoverPasswordForm();
+            recoverForm.ShowDialog();
         }
 
         private void LoadUsers()
@@ -59,12 +66,18 @@ namespace Rapimesa
         private void loginButton_Click(object sender, EventArgs e)
         {
             var user = _users.Find(u => u.Username == usernameTextBox.Text);
+            if (string.IsNullOrWhiteSpace(usernameTextBox.Text) || string.IsNullOrWhiteSpace(passwordTextBox.Text))
+            {
+                MessageBox.Show("Por favor ingresa usuario y contraseña.");
+                return;
+            }
+
             if (user == null)
             {
                 MessageBox.Show("Usuario o contraseña incorrectos.");
                 return;
             }
-
+      
             if (user.IsLocked)
             {
                 MessageBox.Show("Cuenta bloqueada. Contacta a un supervisor.");
@@ -104,5 +117,7 @@ namespace Rapimesa
         public string NombreCompleto { get; set; }
         public int FailedAttempts { get; set; }
         public bool IsLocked { get; set; }
+        public string SecurityQuestion { get; set; }
+        public string SecurityAnswer { get; set; }
     }
 }

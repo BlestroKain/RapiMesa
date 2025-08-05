@@ -1,1 +1,1 @@
-[{"Username":"blestro","Password":"nwa512","Rol":"Supervisor","NombreCompleto":"Juan Lemus"},{"Username":"mila","Password":"nwa512","Rol":"Mesero","NombreCompleto":"mila vd"}]
+[{"Username":"blestro","Password":"nwa512","Rol":"Supervisor","NombreCompleto":"Juan Lemus","FailedAttempts":0,"IsLocked":false,"SecurityQuestion":null,"SecurityAnswer":null},{"Username":"mila","Password":"nwa512","Rol":"Mesero","NombreCompleto":"Maria","FailedAttempts":0,"IsLocked":false,"SecurityQuestion":null,"SecurityAnswer":null}]

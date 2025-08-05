@@ -23,31 +23,52 @@ namespace Rapimesa
 
             if (_usuarioActual.Rol == "Supervisor")
             {
-                btnRegistrarUsuario.Visible = true;
-                btnAgregarProducto.Visible = true;
+               btnAgregarProducto.Visible = true;
 
-                btnRegistrarUsuario.Click += (s, e) =>
-                {
-                    var formRegistro = new RegisterUserForm();
-                    formRegistro.ShowDialog();
-                };
-
-                btnAgregarProducto.Click += (s, e) =>
-                {
-                    var ingresoForm = new IngresoProductoForm(path);
-                    ingresoForm.FormClosed += (s2, e2) => LoadInventory();
-                    ingresoForm.ShowDialog();
-                };
+                btnGestionUsuarios.Visible = true;
+                               
             }
             else
-            {
-                btnRegistrarUsuario.Visible = false;
+            {               
                 btnAgregarProducto.Visible = false;
             }
 
             EnsureInventoryExists();
             LoadInventory();
+            RegistrarHistorialLogin();
+
         }
+
+        private void RegistrarHistorialLogin()
+        {
+            using (var package = new ExcelPackage(new FileInfo(path)))
+            {
+                var ws = package.Workbook.Worksheets["Historia"];
+                if (ws == null)
+                {
+                    ws = package.Workbook.Worksheets.Add("Historia");
+                    ws.Cells[1, 1].Value = "Fecha";
+                    ws.Cells[1, 2].Value = "Usuario";
+                    ws.Cells[1, 3].Value = "Producto";
+                    ws.Cells[1, 4].Value = "Cantidad";
+                    ws.Cells[1, 5].Value = "PrecioUnidad";
+                    ws.Cells[1, 6].Value = "Total";
+                    ws.Cells[1, 7].Value = "Movimiento";
+                }
+
+                int row = ws.Dimension.End.Row + 1;
+                ws.Cells[row, 1].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                ws.Cells[row, 2].Value = _usuarioActual.Username;
+                ws.Cells[row, 3].Value = "-";
+                ws.Cells[row, 4].Value = 0;
+                ws.Cells[row, 5].Value = 0;
+                ws.Cells[row, 6].Value = 0;
+                ws.Cells[row, 7].Value = "Inicio de sesión";
+
+                package.Save();
+            }
+        }
+
 
         private void EnsureInventoryExists()
         {
@@ -206,12 +227,7 @@ namespace Rapimesa
         {
             dataGridView1_SelectionChanged(sender, e);
         }
-        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
-        {
-            var formRegistro = new RegisterUserForm();
-            formRegistro.ShowDialog();
-        }
-
+   
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             var ingresoForm = new IngresoProductoForm(path);
@@ -219,5 +235,12 @@ namespace Rapimesa
             ingresoForm.ShowDialog();
         }
 
+        private void btnGestionUsuarios_Click(object sender, EventArgs e)
+        {
+           
+                var userMgmt = new UserManagementForm(); // este es el form de gestión
+                userMgmt.ShowDialog();
+          
+        }
     }
 }

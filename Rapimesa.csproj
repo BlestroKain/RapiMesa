@@ -86,6 +86,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RecoverPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecoverPasswordForm.Designer.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>RecoverPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagementForm.Designer.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IngresoProductoForm.Designer.cs">
       <SubType>Form</SubType>
       <DependentUpon>IngresoProductoForm.cs</DependentUpon>
@@ -135,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterUserForm.resx">
       <DependentUpon>RegisterUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

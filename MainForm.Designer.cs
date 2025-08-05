@@ -11,8 +11,9 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnEgresar;
-        private System.Windows.Forms.Button btnRegistrarUsuario;
         private System.Windows.Forms.Button btnAgregarProducto;
+        private System.Windows.Forms.Button btnGestionUsuarios;
+
 
         protected override void Dispose(bool disposing)
         {
@@ -34,8 +35,8 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnEgresar = new System.Windows.Forms.Button();
-            this.btnRegistrarUsuario = new System.Windows.Forms.Button();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
+            this.btnGestionUsuarios = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             this.SuspendLayout();
@@ -137,18 +138,6 @@
             this.btnEgresar.UseVisualStyleBackColor = true;
             this.btnEgresar.Click += new System.EventHandler(this.btnEgresar_Click);
             // 
-            // btnRegistrarUsuario
-            // 
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(665, 293);
-            this.btnRegistrarUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
-            this.btnRegistrarUsuario.Size = new System.Drawing.Size(118, 25);
-            this.btnRegistrarUsuario.TabIndex = 8;
-            this.btnRegistrarUsuario.Text = "Registrar Usuario";
-            this.btnRegistrarUsuario.UseVisualStyleBackColor = true;
-            this.btnRegistrarUsuario.Visible = false;
-            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
-            // 
             // btnAgregarProducto
             // 
             this.btnAgregarProducto.Location = new System.Drawing.Point(259, 27);
@@ -161,12 +150,23 @@
             this.btnAgregarProducto.Visible = false;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
+            // btnGestionUsuarios
+            // 
+            this.btnGestionUsuarios.Location = new System.Drawing.Point(656, 286);
+            this.btnGestionUsuarios.Name = "btnGestionUsuarios";
+            this.btnGestionUsuarios.Size = new System.Drawing.Size(126, 24);
+            this.btnGestionUsuarios.TabIndex = 0;
+            this.btnGestionUsuarios.Text = "Gestionar Usuarios";
+            this.btnGestionUsuarios.UseVisualStyleBackColor = true;
+            this.btnGestionUsuarios.Click += new System.EventHandler(this.btnGestionUsuarios_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(796, 330);
+            this.Controls.Add(this.btnGestionUsuarios);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dataGridView1);
@@ -175,7 +175,6 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.btnEgresar);
-            this.Controls.Add(this.btnRegistrarUsuario);
             this.Controls.Add(this.btnAgregarProducto);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

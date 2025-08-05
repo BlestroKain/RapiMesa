@@ -11,6 +11,7 @@ namespace Rapimesa
     {
         private string userFile = "usuarios.json";
         private List<User> _users;
+  
 
         public RegisterUserForm()
         {

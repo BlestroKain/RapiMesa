@@ -41,9 +41,9 @@
             this.lblNombreCompleto.AutoSize = true;
             this.lblNombreCompleto.Location = new System.Drawing.Point(12, 15);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
-            this.lblNombreCompleto.Size = new System.Drawing.Size(93, 13);
+            this.lblNombreCompleto.Size = new System.Drawing.Size(47, 13);
             this.lblNombreCompleto.TabIndex = 0;
-            this.lblNombreCompleto.Text = "Nombre completo:";
+            this.lblNombreCompleto.Text = "Nombre:";
             // 
             // lblUsername
             // 
