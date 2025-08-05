@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
 namespace Rapimesa
@@ -9,7 +7,6 @@ namespace Rapimesa
     public partial class RecoverPasswordForm : Form
     {
         private List<User> _users;
-        private string userFile = "usuarios.json";
 
         public RecoverPasswordForm()
         {
@@ -19,15 +16,7 @@ namespace Rapimesa
 
         private void LoadUsers()
         {
-            if (!File.Exists(userFile))
-            {
-                _users = new List<User>();
-                return;
-            }
-
-            var json = File.ReadAllText(userFile);
-            var serializer = new JavaScriptSerializer();
-            _users = serializer.Deserialize<List<User>>(json);
+            _users = UserFileManager.LoadUsers();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

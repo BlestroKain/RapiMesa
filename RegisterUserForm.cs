@@ -1,36 +1,22 @@
 ﻿using Rapimesa;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Web.Script.Serialization;
 using System.Windows.Forms;
 namespace Rapimesa
 {
     public partial class RegisterUserForm : Form
     {
-        private string userFile = "usuarios.json";
         private List<User> _users;
   
 
         public RegisterUserForm()
         {
             InitializeComponent();
-            LoadUsers();
+            _users = UserFileManager.LoadUsers();
             SetupRolOptions();
         }
-        private void LoadUsers()
-        {
-            if (!File.Exists(userFile))
-                _users = new List<User>();
-            else
-            {
-                var json = File.ReadAllText(userFile);
-                var serializer = new JavaScriptSerializer();
-                _users = serializer.Deserialize<List<User>>(json);
-            }
-        }
-         private void SetupRolOptions()
+        private void SetupRolOptions()
         {
             if (_users.Count == 0)
             {
@@ -49,9 +35,7 @@ namespace Rapimesa
 
         private void SaveUsers()
         {
-            var serializer = new JavaScriptSerializer();
-            var json = serializer.Serialize(_users);
-            File.WriteAllText(userFile, json);
+            UserFileManager.SaveUsers(_users);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

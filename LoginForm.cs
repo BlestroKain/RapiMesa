@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
 namespace Rapimesa
@@ -9,7 +7,6 @@ namespace Rapimesa
     public partial class LoginForm : Form
     {
         private List<User> _users;
-        private string userFile = "usuarios.json";
         private int intentosFallidos = 0;
         private const int maxIntentos = 3;
 
@@ -35,32 +32,15 @@ namespace Rapimesa
 
         private void LoadUsers()
         {
-            if (!File.Exists(userFile))
-            {
+            _users = UserFileManager.LoadUsers();
+            if (_users == null)
                 _users = new List<User>();
-                SaveUsers();
-            }
-            else
-            {
-                try
-                {
-                    var json = File.ReadAllText(userFile);
-                    var serializer = new JavaScriptSerializer();
-                    _users = serializer.Deserialize<List<User>>(json);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error cargando usuarios: " + ex.Message);
-                    _users = new List<User>();
-                }
-            }
+            SaveUsers();
         }
 
         private void SaveUsers()
         {
-            var serializer = new JavaScriptSerializer();
-            var json = serializer.Serialize(_users);
-            File.WriteAllText(userFile, json);
+            UserFileManager.SaveUsers(_users);
         }
 
         private void loginButton_Click(object sender, EventArgs e)

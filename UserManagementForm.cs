@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
-using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
 namespace Rapimesa
@@ -11,7 +9,6 @@ namespace Rapimesa
     public partial class UserManagementForm : Form
     {
         private BindingList<User> _users;
-        private string userFile = "usuarios.json";
 
         public UserManagementForm()
         {
@@ -33,24 +30,14 @@ namespace Rapimesa
 
         private void LoadUsers()
         {
-            if (!File.Exists(userFile))
-            {
-                _users = new BindingList<User>();
-                return;
-            }
-
-            var json = File.ReadAllText(userFile);
-            var serializer = new JavaScriptSerializer();
-            var lista = serializer.Deserialize<List<User>>(json);
-
+            var lista = UserFileManager.LoadUsers();
             _users = new BindingList<User>(lista);
             dataGridView1.DataSource = _users;
         }
 
         private void SaveUsers()
         {
-            var json = new JavaScriptSerializer().Serialize(_users.ToList());
-            File.WriteAllText(userFile, json);
+            UserFileManager.SaveUsers(_users.ToList());
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
