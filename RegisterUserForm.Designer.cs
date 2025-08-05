@@ -13,6 +13,10 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms. Label lblPregunta;
+        private System.Windows.Forms.TextBox txtPregunta;
+        private System.Windows.Forms.Label lblRespuesta;
+        private System.Windows.Forms.TextBox txtRespuesta;
 
         protected override void Dispose(bool disposing)
         {
@@ -33,6 +37,10 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.lblPregunta = new System.Windows.Forms.Label();
+            this.txtPregunta = new System.Windows.Forms.TextBox();
+            this.lblRespuesta = new System.Windows.Forms.Label();
+            this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -98,17 +106,44 @@
             // 
             this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Items.AddRange(new object[] {
-            "Supervisor",
-            "Mesero"});
             this.cmbRol.Location = new System.Drawing.Point(130, 102);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(200, 21);
             this.cmbRol.TabIndex = 7;
             // 
+            // lblPregunta
+            // 
+            this.lblPregunta.Location = new System.Drawing.Point(12, 136);
+            this.lblPregunta.Name = "lblPregunta";
+            this.lblPregunta.Size = new System.Drawing.Size(112, 20);
+            this.lblPregunta.TabIndex = 0;
+            this.lblPregunta.Text = "Pregunta secreta:";
+            // 
+            // txtPregunta
+            // 
+            this.txtPregunta.Location = new System.Drawing.Point(130, 136);
+            this.txtPregunta.Name = "txtPregunta";
+            this.txtPregunta.Size = new System.Drawing.Size(200, 20);
+            this.txtPregunta.TabIndex = 1;
+            // 
+            // lblRespuesta
+            // 
+            this.lblRespuesta.Location = new System.Drawing.Point(12, 171);
+            this.lblRespuesta.Name = "lblRespuesta";
+            this.lblRespuesta.Size = new System.Drawing.Size(104, 20);
+            this.lblRespuesta.TabIndex = 2;
+            this.lblRespuesta.Text = "Respuesta:";
+            // 
+            // txtRespuesta
+            // 
+            this.txtRespuesta.Location = new System.Drawing.Point(130, 171);
+            this.txtRespuesta.Name = "txtRespuesta";
+            this.txtRespuesta.Size = new System.Drawing.Size(200, 20);
+            this.txtRespuesta.TabIndex = 3;
+            // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(130, 140);
+            this.btnRegister.Location = new System.Drawing.Point(73, 211);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(200, 30);
             this.btnRegister.TabIndex = 8;
@@ -118,7 +153,11 @@
             // 
             // RegisterUserForm
             // 
-            this.ClientSize = new System.Drawing.Size(350, 190);
+            this.ClientSize = new System.Drawing.Size(350, 253);
+            this.Controls.Add(this.lblPregunta);
+            this.Controls.Add(this.txtPregunta);
+            this.Controls.Add(this.lblRespuesta);
+            this.Controls.Add(this.txtRespuesta);
             this.Controls.Add(this.lblNombreCompleto);
             this.Controls.Add(this.txtNombreCompleto);
             this.Controls.Add(this.lblUsername);

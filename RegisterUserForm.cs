@@ -73,6 +73,14 @@ namespace Rapimesa
                 MessageBox.Show("El usuario ya existe.");
                 return;
             }
+            var pregunta = txtPregunta.Text.Trim();
+            var respuesta = txtRespuesta.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(pregunta) || string.IsNullOrWhiteSpace(respuesta))
+            {
+                MessageBox.Show("Debes ingresar la pregunta y la respuesta secreta.");
+                return;
+            }
 
             _users.Add(new User
             {
@@ -81,8 +89,11 @@ namespace Rapimesa
                 Rol = rol,
                 NombreCompleto = nombre,
                 FailedAttempts = 0,
-                IsLocked = false
+                IsLocked = false,
+                SecurityQuestion = pregunta,
+                SecurityAnswer = respuesta
             });
+
 
             SaveUsers();
             MessageBox.Show("Usuario registrado con éxito.");

@@ -13,7 +13,7 @@
         private System.Windows.Forms.Button btnEgresar;
         private System.Windows.Forms.Button btnAgregarProducto;
         private System.Windows.Forms.Button btnGestionUsuarios;
-
+        private System.Windows.Forms.Button btnResumenFinanciero;
 
         protected override void Dispose(bool disposing)
         {
@@ -37,6 +37,7 @@
             this.btnEgresar = new System.Windows.Forms.Button();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
+            this.btnResumenFinanciero = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +58,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(626, 250);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // btnResumenFinanciero
+            // 
+         
+            this.btnResumenFinanciero.Location = new System.Drawing.Point(656, 256); // Ajusta la posición según tu layout
+            this.btnResumenFinanciero.Name = "btnResumenFinanciero";
+            this.btnResumenFinanciero.Size = new System.Drawing.Size(126, 24);
+            this.btnResumenFinanciero.TabIndex = 10;
+            this.btnResumenFinanciero.Text = "Resumen Diario";
+            this.btnResumenFinanciero.UseVisualStyleBackColor = true;
+            this.btnResumenFinanciero.Click += new System.EventHandler(this.btnResumenFinanciero_Click);
+
             // 
             // lblUsuario
             // 
@@ -176,6 +189,7 @@
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.btnEgresar);
             this.Controls.Add(this.btnAgregarProducto);
+            this.Controls.Add(this.btnResumenFinanciero);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

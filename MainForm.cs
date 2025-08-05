@@ -26,11 +26,15 @@ namespace Rapimesa
                btnAgregarProducto.Visible = true;
 
                 btnGestionUsuarios.Visible = true;
-                               
+                btnResumenFinanciero.Visible=true;
+
+
             }
             else
             {               
                 btnAgregarProducto.Visible = false;
+                btnGestionUsuarios.Visible = false;
+                btnResumenFinanciero.Visible = false;
             }
 
             EnsureInventoryExists();
@@ -112,7 +116,28 @@ namespace Rapimesa
                 }
 
                 dataGridView1.DataSource = _dtInventario;
+                ResaltarStockBajo();
+
             }
+        }
+
+        private void ResaltarStockBajo()
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (int.TryParse(row.Cells["Stock"].Value?.ToString(), out int stock) && stock < 5)
+                {
+                    row.DefaultCellStyle.BackColor = System.Drawing.Color.LightCoral;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+                }
+            }
+        }
+        private void btnResumenFinanciero_Click(object sender, EventArgs e)
+        {
+            new ResumenFinancieroForm().ShowDialog();
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -173,7 +198,7 @@ namespace Rapimesa
                         string producto = ws.Cells[filaExcel, 2].Text;
                         double precio = double.Parse(ws.Cells[filaExcel, 4].Text);
 
-                        RegistrarHistorial(package, producto, cantidad, precio, ingreso ? "Ingreso" : "Egreso");
+                        RegistrarHistorial(package, producto, cantidad, precio, ingreso ? "Ingreso" : "Venta");
 
                         package.Save();
 
@@ -184,7 +209,7 @@ namespace Rapimesa
             }
 
             LoadInventory();
-            MessageBox.Show($"{(ingreso ? "Ingreso" : "Egreso")} registrado.");
+            MessageBox.Show($"{(ingreso ? "Ingreso" : "Venta")} registrado.");
         }
 
         private void RegistrarHistorial(ExcelPackage package, string producto, int cantidad, double precio, string tipo)

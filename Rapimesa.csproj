@@ -86,6 +86,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ResumenFinancieroForm.Designer.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>ResumenFinancieroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResumenFinancieroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RecoverPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
