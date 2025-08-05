@@ -38,6 +38,7 @@ namespace Rapimesa
             }
 
             EnsureInventoryExists();
+            HacerBackupExcel();
             LoadInventory();
             RegistrarHistorialLogin();
 
@@ -262,10 +263,71 @@ namespace Rapimesa
 
         private void btnGestionUsuarios_Click(object sender, EventArgs e)
         {
-           
+
                 var userMgmt = new UserManagementForm(); // este es el form de gestión
                 userMgmt.ShowDialog();
-          
+
+        }
+
+        private void btnExportarCSV_Click(object sender, EventArgs e)
+        {
+            using (var sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "CSV (*.csv)|*.csv";
+                sfd.FileName = "inventario.csv";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    ExportarInventarioACSV(sfd.FileName);
+                }
+            }
+        }
+
+        private void ExportarInventarioACSV(string rutaArchivo)
+        {
+            using (StreamWriter sw = new StreamWriter(rutaArchivo))
+            {
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                {
+                    sw.Write(dataGridView1.Columns[i].HeaderText);
+                    if (i < dataGridView1.Columns.Count - 1) sw.Write(",");
+                }
+                sw.WriteLine();
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                    {
+                        sw.Write(row.Cells[i].Value?.ToString());
+                        if (i < dataGridView1.Columns.Count - 1) sw.Write(",");
+                    }
+                    sw.WriteLine();
+                }
+            }
+
+            MessageBox.Show("Inventario exportado a CSV con éxito.");
+        }
+
+        private void HacerBackupExcel()
+        {
+            var original = path;
+            var backup = $"Historia_backup_{DateTime.Now:yyyyMMdd}.xlsx";
+            string lastBackupFile = "last_backup.txt";
+
+            if (File.Exists(lastBackupFile))
+            {
+                var content = File.ReadAllText(lastBackupFile);
+                if (DateTime.TryParse(content, out DateTime last))
+                {
+                    if ((DateTime.Now - last).TotalDays < 1)
+                        return;
+                }
+            }
+
+            if (File.Exists(original))
+            {
+                File.Copy(original, backup, true);
+                File.WriteAllText(lastBackupFile, DateTime.Now.ToString("yyyy-MM-dd"));
+            }
         }
     }
 }

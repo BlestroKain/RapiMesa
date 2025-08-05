@@ -1,33 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Web.Script.Serialization;
+using System;
 using System.Windows.Forms;
+using Rapimesa.Data;
 
 namespace Rapimesa
 {
     public partial class RecoverPasswordForm : Form
     {
-        private List<User> _users;
-        private string userFile = "usuarios.json";
+        private readonly AccountManager _accountManager;
 
         public RecoverPasswordForm()
         {
             InitializeComponent();
-            LoadUsers();
-        }
-
-        private void LoadUsers()
-        {
-            if (!File.Exists(userFile))
-            {
-                _users = new List<User>();
-                return;
-            }
-
-            var json = File.ReadAllText(userFile);
-            var serializer = new JavaScriptSerializer();
-            _users = serializer.Deserialize<List<User>>(json);
+            _accountManager = new AccountManager();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -39,7 +23,7 @@ namespace Rapimesa
                 return;
             }
 
-            var user = _users.Find(u => u.Username == username);
+            var user = _accountManager.GetUser(username);
             if (user == null)
             {
                 MessageBox.Show("Usuario no encontrado.");
@@ -59,7 +43,7 @@ namespace Rapimesa
                 return;
             }
 
-            var user = _users.Find(u => u.Username == username);
+            var user = _accountManager.GetUser(username);
             if (user == null) return;
 
             if (txtRespuesta.Text.Trim().Equals(user.SecurityAnswer, StringComparison.OrdinalIgnoreCase))
