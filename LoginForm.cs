@@ -1,30 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Web.Script.Serialization;
 using System.Windows.Forms;
+using Rapimesa.Data;
 
 namespace Rapimesa
 {
     public partial class LoginForm : Form
     {
+        private readonly AccountManager _accountManager;
         private List<User> _users;
-        private string userFile = "usuarios.json";
-        private int intentosFallidos = 0;
-        private const int maxIntentos = 3;
 
         public LoginForm()
         {
             InitializeComponent();
+            _accountManager = new Data.AccountManager();
             LoadUsers();
 
-            // 👉 Si no hay usuarios, abrir el formulario de registro automáticamente
             if (_users.Count == 0)
             {
                 MessageBox.Show("No se encontraron usuarios. Registra al primer Supervisor.");
                 var registro = new RegisterUserForm();
                 registro.ShowDialog();
-                LoadUsers(); // Cargar de nuevo después de registrar
+                LoadUsers();
             }
         }
         private void btnRecuperar_Click(object sender, EventArgs e)
@@ -35,37 +32,12 @@ namespace Rapimesa
 
         private void LoadUsers()
         {
-            if (!File.Exists(userFile))
-            {
-                _users = new List<User>();
-                SaveUsers();
-            }
-            else
-            {
-                try
-                {
-                    var json = File.ReadAllText(userFile);
-                    var serializer = new JavaScriptSerializer();
-                    _users = serializer.Deserialize<List<User>>(json);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error cargando usuarios: " + ex.Message);
-                    _users = new List<User>();
-                }
-            }
-        }
-
-        private void SaveUsers()
-        {
-            var serializer = new JavaScriptSerializer();
-            var json = serializer.Serialize(_users);
-            File.WriteAllText(userFile, json);
+            _users = _accountManager.GetUsers();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            var user = _users.Find(u => u.Username == usernameTextBox.Text);
+            var user = _accountManager.GetUser(usernameTextBox.Text);
             if (string.IsNullOrWhiteSpace(usernameTextBox.Text) || string.IsNullOrWhiteSpace(passwordTextBox.Text))
             {
                 MessageBox.Show("Por favor ingresa usuario y contraseña.");
@@ -87,7 +59,7 @@ namespace Rapimesa
             if (user.Password == passwordTextBox.Text)
             {
                 user.FailedAttempts = 0;
-                SaveUsers();
+                _accountManager.UpdateUser(user);
                 var main = new MainForm(user);
                 main.Show();
                 this.Hide();
@@ -104,20 +76,9 @@ namespace Rapimesa
                 {
                     MessageBox.Show("Usuario o contraseña incorrectos.");
                 }
-                SaveUsers();
+                _accountManager.UpdateUser(user);
             }
         }
     }
 
-    public class User
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Rol { get; set; }
-        public string NombreCompleto { get; set; }
-        public int FailedAttempts { get; set; }
-        public bool IsLocked { get; set; }
-        public string SecurityQuestion { get; set; }
-        public string SecurityAnswer { get; set; }
-    }
 }

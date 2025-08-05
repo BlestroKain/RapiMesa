@@ -14,6 +14,7 @@
         private System.Windows.Forms.Button btnAgregarProducto;
         private System.Windows.Forms.Button btnGestionUsuarios;
         private System.Windows.Forms.Button btnResumenFinanciero;
+        private System.Windows.Forms.Button btnExportarCSV;
 
         protected override void Dispose(bool disposing)
         {
@@ -38,6 +39,7 @@
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
             this.btnResumenFinanciero = new System.Windows.Forms.Button();
+            this.btnExportarCSV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             this.SuspendLayout();
@@ -70,9 +72,20 @@
             this.btnResumenFinanciero.UseVisualStyleBackColor = true;
             this.btnResumenFinanciero.Click += new System.EventHandler(this.btnResumenFinanciero_Click);
 
-            // 
+            //
+            // btnExportarCSV
+            //
+            this.btnExportarCSV.Location = new System.Drawing.Point(18, 286);
+            this.btnExportarCSV.Name = "btnExportarCSV";
+            this.btnExportarCSV.Size = new System.Drawing.Size(125, 24);
+            this.btnExportarCSV.TabIndex = 11;
+            this.btnExportarCSV.Text = "Exportar CSV";
+            this.btnExportarCSV.UseVisualStyleBackColor = true;
+            this.btnExportarCSV.Click += new System.EventHandler(this.btnExportarCSV_Click);
+
+            //
             // lblUsuario
-            // 
+            //
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Location = new System.Drawing.Point(14, 9);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -190,6 +203,7 @@
             this.Controls.Add(this.btnEgresar);
             this.Controls.Add(this.btnAgregarProducto);
             this.Controls.Add(this.btnResumenFinanciero);
+            this.Controls.Add(this.btnExportarCSV);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
