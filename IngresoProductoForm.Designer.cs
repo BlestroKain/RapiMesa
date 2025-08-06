@@ -8,6 +8,9 @@
         private System.Windows.Forms.NumericUpDown numCantidad;
         private System.Windows.Forms.NumericUpDown numPrecio;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button Cancelbttn;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Label lblPrecio;
 
         protected override void Dispose(bool disposing)
         {
@@ -18,6 +21,8 @@
         private void InitializeComponent()
         {
             this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.numCantidad = new System.Windows.Forms.NumericUpDown();
             this.numPrecio = new System.Windows.Forms.NumericUpDown();
@@ -34,6 +39,22 @@
             this.lblNombre.Size = new System.Drawing.Size(82, 23);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Producto:";
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.Location = new System.Drawing.Point(12, 45);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(82, 23);
+            this.lblCantidad.TabIndex = 9;
+            this.lblCantidad.Text = "Cantidad:";
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.Location = new System.Drawing.Point(12, 75);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(82, 23);
+            this.lblPrecio.TabIndex = 8;
+            this.lblPrecio.Text = "Precio:";
             // 
             // txtNombre
             // 
@@ -69,47 +90,44 @@
             this.numPrecio.DecimalPlaces = 2;
             this.numPrecio.Location = new System.Drawing.Point(100, 72);
             this.numPrecio.Maximum = new decimal(new int[] {
-            1000000,
+            10000000,
             0,
             0,
             0});
             this.numPrecio.Name = "numPrecio";
             this.numPrecio.Size = new System.Drawing.Size(120, 20);
             this.numPrecio.TabIndex = 3;
-            this.numPrecio.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(100, 110);
+            this.btnGuardar.Location = new System.Drawing.Point(100, 135);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Cancelbttn
             // 
-            this.Cancelbttn.Location = new System.Drawing.Point(181, 110);
+            this.Cancelbttn.Location = new System.Drawing.Point(181, 135);
             this.Cancelbttn.Name = "Cancelbttn";
             this.Cancelbttn.Size = new System.Drawing.Size(75, 23);
-            this.Cancelbttn.TabIndex = 5;
+            this.Cancelbttn.TabIndex = 6;
             this.Cancelbttn.Text = "Cancelar";
             this.Cancelbttn.Click += new System.EventHandler(this.Cancelbttn_Click);
             // 
             // IngresoProductoForm
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(300, 160);
+            this.ClientSize = new System.Drawing.Size(300, 180);
             this.Controls.Add(this.Cancelbttn);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.numCantidad);
-            this.Controls.Add(this.numPrecio);
             this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.numPrecio);
+            this.Controls.Add(this.numCantidad);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "IngresoProductoForm";
@@ -120,7 +138,5 @@
             this.PerformLayout();
 
         }
-
-        private System.Windows.Forms.Button Cancelbttn;
     }
 }

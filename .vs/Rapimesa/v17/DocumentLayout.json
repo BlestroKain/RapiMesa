@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\resumenfinancieroform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:resumenfinancieroform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\data\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:data\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\ingresoproductoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:ingresoproductoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\data\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:data\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\ingresoproductoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:ingresoproductoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\ingresoproductoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:ingresoproductoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\data\\historymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:data\\historymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\data\\categorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:data\\categorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\resumenfinancieroform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:resumenfinancieroform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\resumenfinancieroform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:resumenfinancieroform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\resumenfinancieroform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:resumenfinancieroform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\registeruserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,6 +45,42 @@
     {
       "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\registeruserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:registeruserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\data\\stockmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:data\\stockmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|c:\\users\\jlroo\\documents\\github\\rapimesa\\data\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:data\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\resumenfinancieroform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:resumenfinancieroform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\registeruserform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,20 +111,8 @@
       "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:recoverpasswordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9A0C46D1-D407-4DFC-AE07-814606F67B42}|Rapimesa.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,19 +130,122 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\CategoryManager.cs",
+              "RelativeDocumentMoniker": "Data\\CategoryManager.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\CategoryManager.cs",
+              "RelativeToolTip": "Data\\CategoryManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T02:08:27.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConnectionManager.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\ConnectionManager.cs",
+              "RelativeDocumentMoniker": "Data\\ConnectionManager.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\ConnectionManager.cs",
+              "RelativeToolTip": "Data\\ConnectionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T02:07:31.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "IngresoProductoForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\IngresoProductoForm.cs",
+              "RelativeDocumentMoniker": "IngresoProductoForm.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\IngresoProductoForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "IngresoProductoForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T20:30:00.223Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IngresoProductoForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\IngresoProductoForm.Designer.cs",
+              "RelativeDocumentMoniker": "IngresoProductoForm.Designer.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\IngresoProductoForm.Designer.cs",
+              "RelativeToolTip": "IngresoProductoForm.Designer.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T04:01:51.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductManager.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\ProductManager.cs",
+              "RelativeDocumentMoniker": "Data\\ProductManager.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\ProductManager.cs*",
+              "RelativeToolTip": "Data\\ProductManager.cs*",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAawGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T02:08:03.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "IngresoProductoForm.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\IngresoProductoForm.cs",
               "RelativeDocumentMoniker": "IngresoProductoForm.cs",
               "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\IngresoProductoForm.cs",
               "RelativeToolTip": "IngresoProductoForm.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwCYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T00:50:31.976Z"
+              "WhenOpened": "2025-08-05T00:50:31.976Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "HistoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\HistoryManager.cs",
+              "RelativeDocumentMoniker": "Data\\HistoryManager.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\HistoryManager.cs",
+              "RelativeToolTip": "Data\\HistoryManager.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAFAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T03:49:33.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "LoginForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T20:28:26.542Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResumenFinancieroForm.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\ResumenFinancieroForm.cs",
+              "RelativeDocumentMoniker": "ResumenFinancieroForm.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\ResumenFinancieroForm.cs",
+              "RelativeToolTip": "ResumenFinancieroForm.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T00:37:51.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ResumenFinancieroForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\ResumenFinancieroForm.cs",
               "RelativeDocumentMoniker": "ResumenFinancieroForm.cs",
@@ -126,20 +257,97 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ResumenFinancieroForm.cs",
-              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\ResumenFinancieroForm.cs",
-              "RelativeDocumentMoniker": "ResumenFinancieroForm.cs",
-              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\ResumenFinancieroForm.cs",
-              "RelativeToolTip": "ResumenFinancieroForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "RegisterUserForm.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.cs",
+              "RelativeDocumentMoniker": "RegisterUserForm.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.cs",
+              "RelativeToolTip": "RegisterUserForm.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T00:37:51.633Z",
+              "WhenOpened": "2025-08-04T23:04:49.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "RegisterUserForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.cs",
+              "RelativeDocumentMoniker": "RegisterUserForm.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "RegisterUserForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T20:28:36.538Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T22:44:42.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T23:05:35.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AccountManager.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\AccountManager.cs",
+              "RelativeDocumentMoniker": "Data\\AccountManager.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\AccountManager.cs",
+              "RelativeToolTip": "Data\\AccountManager.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T02:06:53.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAA4wI4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T23:08:28.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StockManager.cs",
+              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\StockManager.cs",
+              "RelativeDocumentMoniker": "Data\\StockManager.cs",
+              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Data\\StockManager.cs",
+              "RelativeToolTip": "Data\\StockManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T02:08:18.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "RegisterUserForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.Designer.cs",
               "RelativeDocumentMoniker": "RegisterUserForm.Designer.cs",
@@ -147,23 +355,12 @@
               "RelativeToolTip": "RegisterUserForm.Designer.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAAAEMAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:50:23.442Z"
+              "WhenOpened": "2025-08-04T23:50:23.442Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAIA5wEcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:08:28.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "UserManagementForm.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\UserManagementForm.cs",
               "RelativeDocumentMoniker": "UserManagementForm.cs",
@@ -171,11 +368,12 @@
               "RelativeToolTip": "UserManagementForm.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAFMAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T22:59:23.143Z"
+              "WhenOpened": "2025-08-04T22:59:23.143Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 18,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
@@ -183,33 +381,24 @@
               "RelativeToolTip": "MainForm.Designer.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:09:25.705Z"
+              "WhenOpened": "2025-08-04T23:09:25.705Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 17,
               "Title": "MainForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\MainForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "MainForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:08:23.484Z"
+              "WhenOpened": "2025-08-04T23:08:23.484Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IngresoProductoForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\IngresoProductoForm.cs",
-              "RelativeDocumentMoniker": "IngresoProductoForm.cs",
-              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\IngresoProductoForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "IngresoProductoForm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T20:30:00.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 19,
               "Title": "ResumenFinancieroForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\ResumenFinancieroForm.Designer.cs",
               "RelativeDocumentMoniker": "ResumenFinancieroForm.Designer.cs",
@@ -217,11 +406,12 @@
               "RelativeToolTip": "ResumenFinancieroForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T00:38:45.577Z"
+              "WhenOpened": "2025-08-05T00:38:45.577Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "UserManagementForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\UserManagementForm.Designer.cs",
               "RelativeDocumentMoniker": "UserManagementForm.Designer.cs",
@@ -229,11 +419,12 @@
               "RelativeToolTip": "UserManagementForm.Designer.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAlwD4AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:00:15.069Z"
+              "WhenOpened": "2025-08-04T23:00:15.069Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "RecoverPasswordForm.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RecoverPasswordForm.cs",
               "RelativeDocumentMoniker": "RecoverPasswordForm.cs",
@@ -241,56 +432,36 @@
               "RelativeToolTip": "RecoverPasswordForm.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAAwCUAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:02:05.767Z"
+              "WhenOpened": "2025-08-04T23:02:05.767Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RegisterUserForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.cs",
-              "RelativeDocumentMoniker": "RegisterUserForm.cs",
-              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "RegisterUserForm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T20:28:36.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RegisterUserForm.cs",
-              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.cs",
-              "RelativeDocumentMoniker": "RegisterUserForm.cs",
-              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RegisterUserForm.cs",
-              "RelativeToolTip": "RegisterUserForm.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:04:49.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "RecoverPasswordForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RecoverPasswordForm.cs",
               "RelativeDocumentMoniker": "RecoverPasswordForm.cs",
               "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RecoverPasswordForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "RecoverPasswordForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:15:06.022Z"
+              "WhenOpened": "2025-08-04T23:15:06.022Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "UserManagementForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\UserManagementForm.cs",
               "RelativeDocumentMoniker": "UserManagementForm.cs",
               "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\UserManagementForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "UserManagementForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:00:53.751Z"
+              "WhenOpened": "2025-08-04T23:00:53.751Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "RecoverPasswordForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\RecoverPasswordForm.Designer.cs",
               "RelativeDocumentMoniker": "RecoverPasswordForm.Designer.cs",
@@ -298,11 +469,12 @@
               "RelativeToolTip": "RecoverPasswordForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:02:11.958Z"
+              "WhenOpened": "2025-08-04T23:02:11.958Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "LoginForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.Designer.cs",
               "RelativeDocumentMoniker": "LoginForm.Designer.cs",
@@ -310,42 +482,8 @@
               "RelativeToolTip": "LoginForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:06:56.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T23:05:35.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.cs",
-              "RelativeToolTip": "LoginForm.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T22:44:42.727Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LoginForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "C:\\Users\\jlroo\\Documents\\GitHub\\RapiMesa\\LoginForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "LoginForm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T20:28:26.542Z"
+              "WhenOpened": "2025-08-04T23:06:56.354Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,93 +1,153 @@
+using System;
 using System.Collections.Generic;
-using Mono.Data.Sqlite;
+using Microsoft.Data.Sqlite;
 
 namespace Rapimesa.Data
 {
-    public class ProductManager
+    public static class ProductManager
     {
-        public ProductManager()
+        static ProductManager()
         {
-            using (var conn = ConnectionManager.GetConnection())
-            using (var cmd = conn.CreateCommand())
-            {
-                cmd.CommandText = @"CREATE TABLE IF NOT EXISTS Product(
+            var conn = ConnectionManager.GetConnection();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"
+                CREATE TABLE IF NOT EXISTS Product(
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
-                    CategoryId INTEGER,
+                    Nombre TEXT NOT NULL,
                     Stock INTEGER NOT NULL DEFAULT 0,
-                    FOREIGN KEY(CategoryId) REFERENCES Category(Id));";
-                cmd.ExecuteNonQuery();
-            }
+                    PrecioUnidad REAL NOT NULL DEFAULT 0
+                );";
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            conn.Dispose();
         }
 
-        public List<Product> GetProducts()
+        public static List<Product> GetAll()
         {
             var list = new List<Product>();
-            using (var conn = ConnectionManager.GetConnection())
-            using (var cmd = conn.CreateCommand())
+            var conn = ConnectionManager.GetConnection();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT Id, Nombre, Stock, PrecioUnidad FROM Product;";
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
             {
-                cmd.CommandText = "SELECT Id,Name,CategoryId,Stock FROM Product";
-                using (var reader = cmd.ExecuteReader())
+                list.Add(new Product
                 {
-                    while (reader.Read())
-                    {
-                        list.Add(new Product
-                        {
-                            Id = reader.GetInt32(0),
-                            Name = reader.GetString(1),
-                            CategoryId = reader.IsDBNull(2) ? (int?)null : reader.GetInt32(2),
-                            Stock = reader.GetInt32(3)
-                        });
-                    }
-                }
+                    Id = reader.GetInt32(0),
+                    Nombre = reader.GetString(1),
+                    Stock = reader.GetInt32(2),
+                    PrecioUnidad = reader.GetDouble(3)
+                });
             }
+
+            reader.Dispose();
+            cmd.Dispose();
+            conn.Dispose();
+
             return list;
         }
 
-        public void AddProduct(Product product)
+        public static Product GetById(int id)
+        {
+            var conn = ConnectionManager.GetConnection();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT Id, Nombre, Stock, PrecioUnidad FROM Product WHERE Id = @id;";
+            cmd.Parameters.AddWithValue("@id", id);
+            var reader = cmd.ExecuteReader();
+
+            Product product = null;
+
+            if (reader.Read())
+            {
+                product = new Product
+                {
+                    Id = reader.GetInt32(0),
+                    Nombre = reader.GetString(1),
+                    Stock = reader.GetInt32(2),
+                    PrecioUnidad = reader.GetDouble(3)
+                };
+            }
+
+            reader.Dispose();
+            cmd.Dispose();
+            conn.Dispose();
+
+            return product;
+        }
+        public static int Add(Product product)
         {
             using (var conn = ConnectionManager.GetConnection())
             using (var cmd = conn.CreateCommand())
             {
-                cmd.CommandText = "INSERT INTO Product(Name,CategoryId,Stock) VALUES(@n,@c,@s);";
-                cmd.Parameters.AddWithValue("@n", product.Name);
-                cmd.Parameters.AddWithValue("@c", product.CategoryId);
+                cmd.CommandText = @"
+            INSERT INTO Product (Nombre, Stock, PrecioUnidad)
+            VALUES (@n, @s, @p);
+            SELECT last_insert_rowid();";
+
+                cmd.Parameters.AddWithValue("@n", product.Nombre);
                 cmd.Parameters.AddWithValue("@s", product.Stock);
-                cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@p", product.PrecioUnidad);
+
+                // Obtener el ID generado automáticamente
+                int id = Convert.ToInt32((long)cmd.ExecuteScalar());
+                product.Id = id;
+                return id;
             }
         }
 
-        public void UpdateProduct(Product product)
+
+        public static void Update(Product product)
         {
-            using (var conn = ConnectionManager.GetConnection())
-            using (var cmd = conn.CreateCommand())
-            {
-                cmd.CommandText = "UPDATE Product SET Name=@n,CategoryId=@c,Stock=@s WHERE Id=@id";
-                cmd.Parameters.AddWithValue("@n", product.Name);
-                cmd.Parameters.AddWithValue("@c", product.CategoryId);
-                cmd.Parameters.AddWithValue("@s", product.Stock);
-                cmd.Parameters.AddWithValue("@id", product.Id);
-                cmd.ExecuteNonQuery();
-            }
+            var conn = ConnectionManager.GetConnection();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"
+                UPDATE Product
+                SET Nombre = @n,
+                    Stock = @s,
+                    PrecioUnidad = @p
+                WHERE Id = @id;";
+            cmd.Parameters.AddWithValue("@n", product.Nombre);
+            cmd.Parameters.AddWithValue("@s", product.Stock);
+            cmd.Parameters.AddWithValue("@p", product.PrecioUnidad);
+            cmd.Parameters.AddWithValue("@id", product.Id);
+            cmd.ExecuteNonQuery();
+
+            cmd.Dispose();
+            conn.Dispose();
         }
 
-        public void DeleteProduct(int id)
+        public static void UpdateStock(int id, int nuevoStock)
         {
-            using (var conn = ConnectionManager.GetConnection())
-            using (var cmd = conn.CreateCommand())
-            {
-                cmd.CommandText = "DELETE FROM Product WHERE Id=@id";
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.ExecuteNonQuery();
-            }
+            var conn = ConnectionManager.GetConnection();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "UPDATE Product SET Stock = @s WHERE Id = @id;";
+            cmd.Parameters.AddWithValue("@s", nuevoStock);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+
+            cmd.Dispose();
+            conn.Dispose();
+        }
+
+        public static void Delete(int id)
+        {
+            var conn = ConnectionManager.GetConnection();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "DELETE FROM Product WHERE Id = @id;";
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+
+            cmd.Dispose();
+            conn.Dispose();
         }
     }
 
     public class Product
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public int? CategoryId { get; set; }
+        public string Nombre { get; set; } = string.Empty;
         public int Stock { get; set; }
+        public double PrecioUnidad { get; set; }
     }
 }

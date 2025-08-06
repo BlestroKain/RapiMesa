@@ -1,10 +1,10 @@
-using Mono.Data.Sqlite;
+using Microsoft.Data.Sqlite;
 
 namespace Rapimesa.Data
 {
     public static class ConnectionManager
     {
-        private const string ConnectionString = "Data Source=rapimesa.db;Version=3;";
+        private const string ConnectionString = "Data Source=rapimesa.db;";
 
         public static SqliteConnection GetConnection()
         {
